@@ -1,26 +1,22 @@
 // Import the GitHub API
+import { Octokit } from 'octokit'
 
+// GitHub API setup
+export const octokit = new Octokit.Octokit({
+    baseUrl: 'https://api.github.com',
+    accessToken: 'your-github-token'
+});
 
-    // GitHub API setup
+const repoOwner = 'ProxyAyush';
+const repoName = 'eatcha'; 
 
-    import { Octokit } from 'octokit'
+export async function createIssue(userInfo) {
+    // todo: validate the user info 
 
-    window.octokit = new Octokit.Octokit({
-        baseUrl: 'https://api.github.com',
-        accessToken: 'your-github-token'
+    const newIssue = await octokit.issues.create({
+        owner: repoOwner,
+        repo: repoName,
+        title: 'New user info',
+        body: `Here is the new user info: \n${JSON.stringify(userInfo)}`
     });
-
-    const repoOwner = 'ProxyAyush';
-    const repoName = 'eatcha'; 
-
-    window.createIssue = async (userInfo) => {
-        // todo: validate the user info 
-
-        const newIssue = await window.octokit.issues.create({
-            owner: repoOwner,
-            repo: repoName,
-            title: 'New user info',
-            body: `Here is the new user info: \n${JSON.stringify(userInfo)}`
-        });
-    }
-
+}
