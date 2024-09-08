@@ -1,11 +1,9 @@
-const script = document.createElement('script');
-script.src = "https://unpkg.com/@octokit/core@4/dist/index.js";
-script.crossOrigin = "anonymous";
-document.head.appendChild(script);
+// Import the GitHub API
 
-script.onload = async () => {
 
     // GitHub API setup
+
+    import { Octokit } from 'octokit'
 
     window.octokit = new Octokit.Octokit({
         baseUrl: 'https://api.github.com',
@@ -25,4 +23,4 @@ script.onload = async () => {
             body: `Here is the new user info: \n${JSON.stringify(userInfo)}`
         });
     }
-}
+
