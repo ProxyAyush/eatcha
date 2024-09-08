@@ -3,7 +3,7 @@ export async function createIssue(userInfo) {
 
     const octokit = new Octokit.Octokit({
         baseUrl: 'https://api.github.com',
-        accessToken: 'your-github-token'
+        accessToken: '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'
     });
     const repoOwner = 'ProxyAyush';
     const repoName = 'eatcha'; 
