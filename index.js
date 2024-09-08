@@ -1,11 +1,11 @@
-import { createIssue } from 'https://raw.githubusercontent.com/proxyayush/eatcha/main/github-api.js';
+import { createIssue } from 'https://proxyayush.github.io/github-api.js';
 
 const form = document.getElementById('user-info-form');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const birthdate = document.getElementById('birthdate').value;
+    const birthdate = document.getElementById('birthday').value;
     const userInfo = {
         'name':name,
         'email':email,
