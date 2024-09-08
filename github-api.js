@@ -1,4 +1,4 @@
-import { Octokit } from 'https://cdn.jsdelivr.net/npm/octokit@4.2.4/dist/index.min.js';
+import { Octokit } from 'https://cdn.jsdelivr.net/npm/@octokit/octokit@latest/dist/index.min.js';
 
 export async function createIssue(userInfo) {
     // todo: validate the user info 
