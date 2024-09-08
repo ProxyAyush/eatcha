@@ -1,4 +1,4 @@
-class Octokit {
+export class Octokit {
     constructor(options) {
         this.options = options;
     }
