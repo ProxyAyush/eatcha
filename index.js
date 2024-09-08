@@ -1,4 +1,4 @@
-import { createIssue } from 'https://proxyayush.github.io/github-api.js';
+import { createIssue } from 'https://proxyayush.github.io/eatcha/github-api.js';
 
 const form = document.getElementById('user-info-form');
 form.addEventListener('submit', (e) => {
