@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info Collector</title>
+</head>
+<body>
+    <h1>User Info Collector</h1>
+    <form id="user-info-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="thank-you-message"></div>
+
+    <script src="github-api.js"></script>
+    <script>
+        const form = document.getElementById('user-info-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const birthdate = document.getElementById('birthdate').value;
+            const userInfo = {
+                'name':name,
+                'email':email,
+                'birthdate':birthdate
+            };
+            createIssue(userInfo);
+            document.getElementById('thank-you-message').innerText = `Thank you for submitting your information, ${name}!`;
+        });
+    </script>
+
+</body>
+</html>
