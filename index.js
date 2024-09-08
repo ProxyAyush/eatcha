@@ -1,4 +1,4 @@
-import { createIssue } from './github-api.js';
+import { createIssue } from '/github-api.js';
 
 const form = document.getElementById('user-info-form');
 form.addEventListener('submit', (e) => {
