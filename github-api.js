@@ -1,3 +1,5 @@
+import { Octokit } from 'https://cdn.jsdelivr.net/npm/octokit@4.2.4/dist/index.min.js';
+
 export async function createIssue(userInfo) {
     // todo: validate the user info 
 
@@ -6,7 +8,7 @@ export async function createIssue(userInfo) {
         accessToken: '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'
     });
     const repoOwner = 'ProxyAyush';
-    const repoName = 'eatcha'; 
+    const repoName = 'eatcha';
 
     const newIssue = await octokit.issues.create({
         owner: repoOwner,
