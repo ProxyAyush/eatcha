@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Info Collector</title>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://unpkg.com 'unsafe-eval'https://api.github.com; object-src 'self'"> 
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://unpkg.com https://api.github.com 'unsafe-inline'"> 
 </head>
 <body>
     <h1>User Info Collector</h1>
@@ -32,8 +32,6 @@
                 'email':email,
                 'birthdate':birthdate
             };
-            createIssue(userInfo);
-            document.getElementById('thank-you-message').innerText = `Thank you for submitting your information, ${name}!`;
         });
     </script>
 

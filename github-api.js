@@ -1,9 +1,7 @@
-// Import the GitHub API
 const script = document.createElement('script');
-script.src = "https://unpkg.com/@octokit/octokit/dist/index.min.js";
+script.src = "https://cdn.jsdelivr.net/npm/octokit@latest/dist/index.min.js";
 document.head.appendChild(script);
 
-// Let's make sure the script is loaded before proceeding.
 script.onload = async () => {
 
     // GitHub API setup
