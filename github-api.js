@@ -1,5 +1,6 @@
 const script = document.createElement('script');
 script.src = "https://cdn.jsdelivr.net/npm/octokit@latest/dist/index.min.js";
+script.crossOrigin = "anonymous";
 document.head.appendChild(script);
 
 script.onload = async () => {
