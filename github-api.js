@@ -18,7 +18,7 @@ export class Octokit {
     static getInstance() {
         return new Octokit({
             baseUrl: 'https://api.github.com',
-            accessToken: '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',
+            accessToken: 'your-git-key',
             owner:'ProxyAyush',
             repo:'eatcha'
         });
